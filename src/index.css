@@ -1,0 +1,16 @@
+body {
+  display: flex;
+  justify-content: center;  
+  align-items: center;      
+  height: 100vh;            
+  margin: 0;            
+} 
+button{
+    color: rgb(255, 35, 35);
+    background-color: #adadad;
+    border: 2px black solid;
+    gap: 10px;
+    height: 60px;
+    width: 60px;
+}
+ 
