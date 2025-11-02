@@ -57,7 +57,7 @@ function RestartButton(){
         <Square value={square[8]} onSquareClick={() => handleClick(8)} />
       </div>
 
-       <button className="startButton" onClick={RestartButton}><h3>Start Game</h3></button> 
+       <button className="startButton" onClick={RestartButton}><h3>Restart Game</h3></button> 
     </>
   );
 }
