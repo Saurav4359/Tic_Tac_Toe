@@ -9,9 +9,10 @@ const Square = ({value,onSquareClick}) => {
 
 function App() {
   const [square ,setsquare]=useState(Array(9).fill(null));
+  cosnt [xIsNest, setXIsNext]=useState(true);
   const handleClick=(i)=>{
      const nextSq=square.slice();
-     nextSq[i]='X';
+     nextSq[i]= xIsNest ? "X" : "O";
      setsquare(nextSq);
   }
   return (
