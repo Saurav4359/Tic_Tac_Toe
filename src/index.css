@@ -1,4 +1,4 @@
-body {
+/* body {
   display: flex;
   justify-content: center;  
   align-items: center;      
@@ -7,10 +7,10 @@ body {
 } 
 button{
     color: rgb(255, 35, 35);
-    background-color: #adadad;
+    background-color: #b5b5b5;
     border: 2px black solid;
     gap: 10px;
     height: 60px;
     width: 60px;
 }
- 
+  */
