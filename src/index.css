@@ -1,28 +1,88 @@
+/* ===== RESET + BASE ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   display: flex;
+  flex-direction: column;
   justify-content: center;  
   align-items: center;      
   height: 100vh;            
-  margin: 0;   
   background: #f1ffc9;         
-} 
-button{
-    color: rgb(255, 35, 35);
-    background-color: #b5b5b5;
-    border: 2px black solid;
-    gap: 10px;
-    height: 70px;
-    width: 70px;
-    
+  font-family: "Poppins", sans-serif;
 }
- .startButton{
+
+/* ===== STATUS TEXT ===== */
+.status h1 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* ===== BOARD LAYOUT ===== */
+.row {
+  display: flex;
+}
+
+/* ===== SQUARES ===== */
+.squares {
+  color: #ff2323;
+  background-color: #e0e0e0;
+  border: 2px solid black;
+  height: 80px;
+  width: 80px;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.squares:hover {
+  background-color: #d3d3d3;
+  transform: scale(1.05);
+}
+
+/* ===== RESTART BUTTON ===== */
+.startButton {
   width: 180px;
   background: #ff8d8d;
   color: black;
-  border: 0px;
-  margin: 10px;
-  margin-left: 0px;
+  border: none;
+  margin-top: 25px;
   height: 50px;
-  border-radius: 20px;
-   
- }
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.startButton:hover {
+  background: #ff6b6b;
+  transform: translateY(-2px);
+}
+
+/* ===== MOBILE RESPONSIVE ===== */
+@media (max-width: 500px) {
+  .squares {
+    height: 60px;
+    width: 60px;
+    font-size: 1.5rem;
+  }
+
+  .status h1 {
+    font-size: 1.3rem;
+  }
+
+  .startButton {
+    width: 150px;
+    height: 45px;
+    font-size: 0.9rem;
+  }
+}
