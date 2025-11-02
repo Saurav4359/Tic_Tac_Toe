@@ -16,13 +16,19 @@ function App() {
   const handleClick = (i) => {
     if (calculateWinner(square) || square[i]) 
       return; 
-    const nextSq = square.slice();
+    const nextSq = square.slice(); // create a duplicate array..
     nextSq[i] = xIsNext ? "X" : "O";
 
     setsquare(nextSq);
     setXIsNext(!xIsNext);
   };
-// const winner=calculateWinner(square);
+const winner=calculateWinner(square);
+let status;
+if(winner)
+  status="Winner : " +winner;
+else {
+  status="Next Player : "+(xIsNext ? 'X' : 'O');
+}
 
 
 
@@ -30,6 +36,7 @@ function App() {
 
   return (
     <>
+     <div className="status">{status}</div>
       <div className="row">
         <Square value={square[0]} onSquareClick={() => handleClick(0)} />
         <Square value={square[1]} onSquareClick={() => handleClick(1)} />
