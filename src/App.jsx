@@ -36,7 +36,7 @@ else {
 
   return (
     <>
-     <div className="status">{status}</div>
+     <div className="status"><h1> {status} </h1></div>
       <div className="row">
         <Square value={square[0]} onSquareClick={() => handleClick(0)} />
         <Square value={square[1]} onSquareClick={() => handleClick(1)} />
@@ -52,6 +52,8 @@ else {
         <Square value={square[7]} onSquareClick={() => handleClick(7)} />
         <Square value={square[8]} onSquareClick={() => handleClick(8)} />
       </div>
+
+       <button className="startButton"><h3>Start Game</h3></button> 
     </>
   );
 }
