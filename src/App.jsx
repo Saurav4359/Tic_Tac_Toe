@@ -30,6 +30,10 @@ else {
   status="Next Player : "+(xIsNext ? 'X' : 'O');
 }
 
+function RestartButton(){
+    setXIsNext(true);
+    setsquare(Array(9).fill(null));
+}
 
 
 
@@ -53,7 +57,7 @@ else {
         <Square value={square[8]} onSquareClick={() => handleClick(8)} />
       </div>
 
-       <button className="startButton"><h3>Start Game</h3></button> 
+       <button className="startButton" onClick={RestartButton}><h3>Start Game</h3></button> 
     </>
   );
 }
